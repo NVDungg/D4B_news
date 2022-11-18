@@ -133,8 +133,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #Using Custom User models by config AUTH_USER_MODEL
 AUTH_USER_MODEL = "accounts.CustomUser"
 
+#Redirect Log In/Out
 LOGIN_REDIRECT_URL = "home" 
 LOGOUT_REDIRECT_URL = "home" 
 
+#Using creispy form bootstrap
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5" # new
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+#Using email to reset the password
+#https://docs.djangoproject.com/en/4.1/topics/email/#console-backend
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBacked"
