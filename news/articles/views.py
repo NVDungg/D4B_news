@@ -39,6 +39,7 @@ class CommentPost(LoginRequiredMixin, SingleObjectMixin, FormView):
     template_name = "articles/article_detail.html"
 
     def post(self, request, *args, **kwargs):
+        """grab the article pk from the URL"""
         self.object = self.get_object()
         return super().post(request, *args, **kwargs)
 
