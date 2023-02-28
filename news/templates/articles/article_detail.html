@@ -21,8 +21,12 @@
         {{ form|crispy }}
         <button class="btn btn-success ml-2" type="submit">Save</button>
     </form>
+    
+    {% if article.author == request.user %}
+        <p><a href="{% url 'article_edit' pk=article.pk %}">Edit</a> |
+            <a href="{% url 'article_delete' pk=article.pk %}">Delete</a>
+        </p>
+    {% endif %}
 
-    <p><a href="{% url 'article_edit' pk=article.pk %}">Edit</a> |
-        <a href="{% url 'article_delete' pk=article.pk %}">Delete</a></p>
     <p>Back to <a href="{% url 'article_list' %}">All Article</a>.</p>
 {% endblock content %}
