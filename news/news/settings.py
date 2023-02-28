@@ -144,4 +144,10 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 #Using email to reset the password
 #https://docs.djangoproject.com/en/4.1/topics/email/#console-backend
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBacked"
+#EMAIL_BACKEND = "django.core.mail.backends.console.EmailBacked" only work in console(terminal)
+DEFAULT_FROM_EMAIL = "maodanhgi@gmail.com"
+EMAIL_HOST = "smtp.sendgrid.net"
+EMAIL_HOST_USER = "apikey"
+EMAIL_HOST_PASSWORD = "#"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

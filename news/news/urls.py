@@ -23,5 +23,5 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),     #using log in/out urls of contrib.auth.urls 
     #path("", TemplateView.as_view(template_name="home.html"), name="home"),     can add template throught as_view()
     path("", include("pages.urls")),
-    path("article/", include("articles.urls")),
+    path("articles/", include("articles.urls")),
 ]
